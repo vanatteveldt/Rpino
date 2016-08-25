@@ -1,0 +1,33 @@
+---
+title: "README"
+author: "Wouter van Atteveldt"
+date: "August 25, 2016"
+output: md_document
+---
+# Calling Alpino from R
+
+This package is a simple wrapper that calls Alpino (a Dutch dependency parser; see https://www.let.rug.nl/vannoord/alp) from R as a system call.
+
+You need to either set the ALPINO_HOME environment variable to point to your Alpino installation,
+or specify it with the call.
+
+# Installation
+
+Install rsyntax and Rpino from github:
+
+```{r, eval=F}
+devtools::install_github("vanatteveldt/rsyntax")
+devtools::install_github("vanatteveldt/Rpino", force=T)
+```
+
+# Calling Alpino:
+
+```{r, eval=F}
+tokens = Rpino::parse.Alpino(c("Jan houdt van taart", "Ik ook"))
+tokens
+```
+
+```{r, echo=F}
+tokens = Rpino::parse.Alpino(c("Jan houdt van taart", "Ik ook"))
+knitr::kable(tokens)
+```
