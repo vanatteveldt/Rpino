@@ -14,7 +14,7 @@ Installation
 Install rsyntax and Rpino from github:
 
     devtools::install_github("vanatteveldt/rsyntax")
-    devtools::install_github("vanatteveldt/Rpino", force=T)
+    devtools::install_github("vanatteveldt/Rpino")
 
 Calling Alpino:
 ===============
